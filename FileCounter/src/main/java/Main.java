@@ -38,7 +38,7 @@ public class Main {
 
                 taskCounter = tasks.size();
 
-                while(taskCounter-- > 0){
+                while(taskCounter-- > 0 && !KeyboardEscHook.escCommandPressed){
                     try{
                         Future<CounterState> future = completionService.take();
                         CounterState res = future.get();
